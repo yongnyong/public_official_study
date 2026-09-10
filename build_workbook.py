@@ -195,6 +195,7 @@ document.getElementById('grade').addEventListener('click',()=>{
 document.getElementById('reset').addEventListener('click',()=>{document.querySelectorAll('input[type=radio]').forEach(r=>r.checked=false);document.querySelectorAll('.feedback').forEach(f=>{f.hidden=true;f.replaceChildren()});document.getElementById('result').replaceChildren();document.getElementById('quiz').scrollIntoView({behavior:'auto'})});
 document.getElementById('print').addEventListener('click',()=>{document.querySelectorAll('details').forEach(d=>d.open=true);window.print()});
 </script></body></html>'''
+    html = html.replace('<main>', '<main><div class="intro"><h2>기초가 쉽다면: 2027 준비 · 심화 학습실</h2><p><a href="advanced-2027.html">2027 제도 변경, 추가 전공 범위, 서술형 심화문제 6개와 해설 보기 →</a></p><p>아래 교재와 객관식은 입문 점검용이며 실제 5급 전공시험 난도를 나타내지 않습니다.</p></div>', 1)
     (ROOT/'study-workbook.html').write_text(html,encoding='utf-8')
     (ROOT/'09-detailed-lessons.md').write_text('\n'.join(md),encoding='utf-8')
     (ROOT/'10-diagnostic-quiz.md').write_text('\n'.join(quizmd),encoding='utf-8')
