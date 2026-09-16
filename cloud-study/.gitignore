@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+__pycache__/
+.venv/
+data/
+models/
